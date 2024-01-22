@@ -11,20 +11,20 @@ vt = .001                        # Total volume of both spheres in m^3 (steve de
 mu = .95                        # Absolute (Dynamic) viscosity of medium in N*s/m^2 (set to gylcerine)
 
 # Generate the initial trial path
-# initpath = []
+initpath = []
 nump = 500
 t_arr, dt= np.linspace(0.,2.*np.pi,nump,retstep=True)
 
-# for a in t_arr:
-#     # initpath.append([.05*np.cos(a)+1., .00025*np.sin(a) + vt*.5])
-#     # initpath.append([.005*np.cos(a)+1., .0001*np.sin(a) + vt*.6])
-#     # initpath.append([.02*np.cos(a)+1., .0001*np.sin(a) + vt*.6])
-#     # initpath.append([.02*np.cos(a)+1., .0001*np.sin(a) + vt*.6])
-#     # initpath.append([.005*np.cos(a)+.2, .0002*np.sin(a) + vt*.7])
-#     initpath.append([.02*np.cos(a)+.5, .0003*np.sin(a) + vt*.55])
+for a in t_arr:
+    # initpath.append([.05*np.cos(a)+1., .00025*np.sin(a) + vt*.5])
+    # initpath.append([.005*np.cos(a)+1., .0001*np.sin(a) + vt*.6])
+    # initpath.append([.02*np.cos(a)+1., .0001*np.sin(a) + vt*.6])
+    # initpath.append([.02*np.cos(a)+1., .0001*np.sin(a) + vt*.6])
+    # initpath.append([.005*np.cos(a)+.2, .0002*np.sin(a) + vt*.7])
+    initpath.append([.02*np.cos(a)+.5, .0003*np.sin(a) + vt*.55])
 
 # Restart flow
-initpath = np.load('local_optimization_data/constant_H/pathdata/data2.npy')[-1]
+# initpath = np.load('local_optimization_data/constant_H/pathdata/data2.npy')[-1]
 
 # Optimization parameters
 counter = 0
